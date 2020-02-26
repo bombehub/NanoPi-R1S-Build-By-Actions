@@ -49,13 +49,6 @@ jobs:
           cd friendlywrt-h3
           repo init -u https://github.com/friendlyarm/friendlywrt_manifests -b master -m h3.xml --repo-url=https://github.com/friendlyarm/repo  --no-clone-bundle
       
-      - name: Merge UpStearm OpenWrt
-        run: |
-          cd friendlywrt-h3
-          cd .repo/manifests
-          rm -f ./h3.xml
-          wget https://raw.githubusercontent.com/skytotwo/NanoPi-R1S-Build-By-Actions/master/source_xml/h3.xml
-          repo sync -c  --no-clone-bundle
       
       - name: Merge LEDE
         run: |
